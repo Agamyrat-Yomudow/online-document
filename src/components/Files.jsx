@@ -22,7 +22,7 @@ const Files = () => {
     return (
         <div className='w-1/2 flex flex-col gap-2'>
             {files.map((file, index) => (
-                <div className='p-2 bg-white flex items-center justify-between' key={index}>
+                <div className='p-2 bg-white flex rounded-md items-center justify-between' key={index}>
                     <div className='flex items-center gap-2'>
                         {getFileIcon(file.name)}
                         <div className=''>
