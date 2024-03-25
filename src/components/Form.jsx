@@ -11,16 +11,13 @@ const Form = () => {
       [name]: value,
     }));
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Gönderilen form verileri:', formData);
-  };
+
 
     return (
         <div className='container mx-auto '>
             <div>
                 
-                <form className='' onSubmit={handleSubmit} action="">
+                <form className=''  action="">
                     <div className='flex flex-col gap-y-4'>
                         <div className='flex gap-x-8'>
                             <div className='w-1/2 border flex items-center bg-slate-50 rounded-md px-4 gap-4'>
