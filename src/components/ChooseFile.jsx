@@ -6,7 +6,7 @@ import useFileStore from '../zustand/fileStore';
 const ChooseFile = () => {
   const { addFile } = useFileStore();
 
-  const handleFileChange = (e) => {
+  const FileSelected = (e) => {
     const files = Array.from(e.target.files);
     files.forEach(file => addFile(file)); 
   };
@@ -18,7 +18,7 @@ const ChooseFile = () => {
         <label htmlFor='file-upload' className='py-1 px-4 text-white bg-blue-400 rounded-md cursor-pointer'>
          fayl sayla
         </label>
-        <input id='file-upload' type='file' className='hidden' onChange={handleFileChange} multiple />
+        <input id='file-upload' type='file' className='hidden' onChange={FileSelected} multiple />
       </div>
     </div>
   );

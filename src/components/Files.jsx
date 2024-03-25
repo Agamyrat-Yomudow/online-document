@@ -8,7 +8,7 @@ import useFileStore from '../zustand/fileStore';
 const Files = () => {
     const { files } = useFileStore();
 
-    const getFileIcon = (filename) => {
+    const FileFormat = (filename) => {
         const fileFormat = filename.split('.').pop().toLowerCase();
         if (fileFormat === 'pdf') {
             return <AiOutlineFilePdf size={40} />;
@@ -24,7 +24,7 @@ const Files = () => {
             {files.map((file, index) => (
                 <div className='p-2 bg-white flex rounded-md items-center justify-between' key={index}>
                     <div className='flex items-center gap-2'>
-                        {getFileIcon(file.name)}
+                        {FileFormat(file.name)}
                         <div className=''>
                             <p className='text-sm '>{file.name}</p>
                             <span className='text-sm'>{(file.size / 1024 / 1024).toFixed(2)} MB</span>
